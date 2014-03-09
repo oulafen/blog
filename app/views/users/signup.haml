@@ -1,0 +1,39 @@
+.single-form-container(style="margin-left:40%;margin-top:10% " )
+  = form_for @user do |f|
+    %p 注册
+    .boxed-group-inner
+      -if @user.errors
+        .form_errorred
+          填写的信息有误
+      %dl.form
+        %dt
+          = f.label :name
+        %dd
+          = f.text_field :name
+        - if @user.errors[:name]
+          %dd.error
+            = @user.errors[:name][0]
+      %dl.form
+        %dt
+          = f.label :email
+        %dd
+          = f.text_field :email
+        - if @user.errors[:email]
+          %dd.error
+            = @user.errors[:email][0]
+      %dl.form
+        %dt
+          = f.label :password
+        %dd
+          = f.password_field :password
+        - if @user.errors[:password]
+          %dd.error
+            = @user.errors[:password][0]
+      %dl.form
+        %dt
+          = f.label :password_confirmation
+        %dd
+          = f.password_field :password_confirmation
+      %p
+        = f.submit "注册", :class => "button primary"
+

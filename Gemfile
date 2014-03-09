@@ -21,6 +21,9 @@ gem 'turbolinks','1.1.1'
 
 gem 'jbuilder', '1.0.2'
 
+gem 'bcrypt-ruby','3.1.2'
+gem 'protected_attributes'
+
 group :doc do
   gem 'sdoc', require: false
 end
