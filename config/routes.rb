@@ -4,6 +4,9 @@ Blog::Application.routes.draw do
 
   get "/signup" => "users#signup", :as => "signup"
   get "/login" => "users#login", :as => "login"
+  get "/welcome" => "users#welcome", :as => "welcome"
+
+  post '/create_login_session'=>'users#create_login_session'
 
   resources :users, only: [:create]
 

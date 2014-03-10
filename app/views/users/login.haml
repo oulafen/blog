@@ -1,1 +1,12 @@
-%h1 Users#login
+.single-form-container(style="margin-left:40%;margin-top:10% " )
+  #login
+    %p 登录
+    .boxed-group-inner
+    =form_tag '/create_login_session'  do
+      = label_tag '用户名'
+      = text_field_tag :name, params[:name]
+      %br
+      = label_tag '密码'
+      = text_field_tag :password, params[:password]
+      %p
+        = submit_tag "登录", :class => "button primary"

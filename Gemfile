@@ -27,4 +27,12 @@ gem 'protected_attributes'
 group :doc do
   gem 'sdoc', require: false
 end
+
+gem 'bootstrap-sass'
+
+group :development do
+  gem 'rails_layout'
+end
+
+gem 'rails_12factor', group: :production
  
